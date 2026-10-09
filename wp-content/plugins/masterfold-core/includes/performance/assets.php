@@ -106,7 +106,12 @@ add_action(
 		if ( function_exists( 'is_customize_preview' ) && is_customize_preview() ) {
 			return;
 		}
-		ob_start( 'mf_strip_unused_styles' );
+		ob_start(
+			function ( $html ) {
+				$html = mf_strip_unused_styles( $html );
+				return function_exists( 'mf_localize_google_fonts' ) ? mf_localize_google_fonts( $html ) : $html;
+			}
+		);
 	},
 	2
 );
