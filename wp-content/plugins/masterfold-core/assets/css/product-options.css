@@ -1,0 +1,13 @@
+/* Masterfold product attribute sections */
+.mf-attr-empty { display: none; }
+
+/* A section whose attribute widget found nothing for this product is hidden. */
+[class*="selected-"][class*="-column"]:has(.mf-attr-empty):not(:has(.mf-product-options)) { display: none !important; }
+
+.mf-no-product-options .specs-products-exist { display: none !important; }
+
+/* Same as the old form markup: the attribute name label is not shown. */
+.mf-product-options th.label { display: none !important; }
+
+/* Text options (binding, imprint, size) sit on white, like binding/imprint always did. */
+.mf-product-options .custom-lightbox-attribute:has(> .custom-attribute-option) { background-color: #fff; }

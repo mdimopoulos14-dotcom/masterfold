@@ -1,0 +1,229 @@
+{
+ "home": "https://staging.masterfold.com/",
+ "cat_restaurant": "https://staging.masterfold.com/product-category/restaurant/",
+ "prod_restaurant": "https://staging.masterfold.com/product/ocean-fabric-wine-list-sani/",
+ "cat_reception": "https://staging.masterfold.com/product-category/reception/",
+ "prod_reception": "https://staging.masterfold.com/product/shiny-slim-z-key-holder-sani/",
+ "cat_room": "https://staging.masterfold.com/product-category/room/",
+ "prod_room": "https://staging.masterfold.com/product/magnetic-sleeves-guest-directory-sani/",
+ "cat_endless-exploration": "https://staging.masterfold.com/product-category/endless-exploration/",
+ "prod_endless-exploration": "https://staging.masterfold.com/product/gold-detail-info-booklet-sani-dunes/",
+ "cat_stationery": "https://staging.masterfold.com/product-category/stationery/",
+ "prod_stationery": "https://staging.masterfold.com/product/a6-standard-notepad-sani-ikos/",
+ "cat_branded-merchandise": "https://staging.masterfold.com/product-category/branded-merchandise/",
+ "prod_branded-merchandise": "https://staging.masterfold.com/product/paper-ashtray-sani-ikos/",
+ "cat_packaging": "https://staging.masterfold.com/product-category/packaging/",
+ "prod_packaging": "https://staging.masterfold.com/product/petite-premium-gift-box-sani/",
+ "cat_twists-turns": "https://staging.masterfold.com/product-category/twists-turns/",
+ "prod_twists-turns": "https://staging.masterfold.com/product/wooden-blackboard-welcome-sign-sani/",
+ "menus": [
+  [
+   17,
+   "Main Menu",
+   21
+  ]
+ ],
+ "pages": [
+  [
+   42693,
+   "NEW SLIDE",
+   "https://staging.masterfold.com/new-slide/"
+  ],
+  [
+   42379,
+   "TERMS &amp; CONDITIONS",
+   "https://staging.masterfold.com/terms-conditions/"
+  ],
+  [
+   42378,
+   "PRIVACY POLICY",
+   "https://staging.masterfold.com/privacy-policy/"
+  ],
+  [
+   42117,
+   "email view",
+   "https://staging.masterfold.com/email-view/"
+  ],
+  [
+   42014,
+   "Log in to your Account",
+   "https://staging.masterfold.com/login-your-account/"
+  ],
+  [
+   41948,
+   "Register your Account",
+   "https://staging.masterfold.com/register-your-account/"
+  ],
+  [
+   41512,
+   "Restaurant Essentials",
+   "https://staging.masterfold.com/essentials/"
+  ],
+  [
+   41339,
+   "redirect",
+   "https://staging.masterfold.com/redirect/"
+  ],
+  [
+   40554,
+   "PURE SOFT",
+   "https://staging.masterfold.com/materials/sustainable-materials/pure-soft/"
+  ],
+  [
+   40541,
+   "TERRA SOLID",
+   "https://staging.masterfold.com/materials/sustainable-materials/terra-solid/"
+  ],
+  [
+   40523,
+   "MARBLE FEEL",
+   "https://staging.masterfold.com/materials/sustainable-materials/marble-feel/"
+  ],
+  [
+   39834,
+   "Products",
+   "https://staging.masterfold.com/products/"
+  ],
+  [
+   39391,
+   "Materials",
+   "https://staging.masterfold.com/materials/"
+  ],
+  [
+   30605,
+   "Sustainable Materials",
+   "https://staging.masterfold.com/materials/sustainable-materials/"
+  ],
+  [
+   30603,
+   "Standard Materials",
+   "https://staging.masterfold.com/materials/standard-materials/"
+  ],
+  [
+   29520,
+   "WHEAT GRAIN",
+   "https://staging.masterfold.com/materials/sustainable-materials/wheat-grain/"
+  ],
+  [
+   28803,
+   "SAND",
+   "https://staging.masterfold.com/materials/sustainable-materials/sand/"
+  ],
+  [
+   28802,
+   "NATURAL CORK",
+   "https://staging.masterfold.com/materials/sustainable-materials/cork/"
+  ],
+  [
+   28801,
+   "RECYCLED LEATHER",
+   "https://staging.masterfold.com/materials/sustainable-materials/sustainable-recycled-leather/"
+  ],
+  [
+   28800,
+   "OCEAN FABRIC",
+   "https://staging.masterfold.com/materials/sustainable-materials/ocean-fabric/"
+  ],
+  [
+   28799,
+   "SEAGRASS",
+   "https://staging.masterfold.com/materials/sustainable-materials/seagrass/"
+  ],
+  [
+   28797,
+   "NATURAL SURFACES",
+   "https://staging.masterfold.com/materials/sustainable-materials/natural-surfaces/"
+  ],
+  [
+   28153,
+   "FABRIC",
+   "https://staging.masterfold.com/materials/standard-materials/fabric/"
+  ],
+  [
+   28152,
+   "PU LEATHER",
+   "https://staging.masterfold.com/materials/standard-materials/pu-leather/"
+  ],
+  [
+   28145,
+   "LEATHER",
+   "https://staging.masterfold.com/materials/standard-materials/leather/"
+  ],
+  [
+   28135,
+   "ACRYLIC",
+   "https://staging.masterfold.com/materials/standard-materials/acrylic/"
+  ],
+  [
+   28134,
+   "PVC",
+   "https://staging.masterfold.com/materials/standard-materials/pvc/"
+  ],
+  [
+   28129,
+   "WOOD",
+   "https://staging.masterfold.com/materials/standard-materials/wood/"
+  ],
+  [
+   4418,
+   "Partners",
+   "https://staging.masterfold.com/partners/"
+  ],
+  [
+   4416,
+   "Blog",
+   "https://staging.masterfold.com/blog/"
+  ],
+  [
+   27693,
+   "BINDING PAPER",
+   "https://staging.masterfold.com/materials/standard-materials/binding-paper/"
+  ],
+  [
+   27692,
+   "PACKAGING PAPER",
+   "https://staging.masterfold.com/materials/standard-materials/packaging-paper/"
+  ],
+  [
+   27501,
+   "PREMIUM PAPER",
+   "https://staging.masterfold.com/materials/standard-materials/premium-paper/"
+  ],
+  [
+   4243,
+   "STANDARD PAPERS",
+   "https://staging.masterfold.com/materials/standard-materials/standard-paper/"
+  ],
+  [
+   3709,
+   "Embroidery",
+   "https://staging.masterfold.com/print-methods/embroidery/"
+  ],
+  [
+   3708,
+   "Sublimation",
+   "https://staging.masterfold.com/print-methods/sublimation/"
+  ],
+  [
+   3707,
+   "Silk Screen",
+   "https://staging.masterfold.com/print-methods/silk-screen/"
+  ],
+  [
+   3706,
+   "Laser Engraving",
+   "https://staging.masterfold.com/print-methods/laser-engraving/"
+  ],
+  [
+   3704,
+   "Hot Stamping \u2013 Foil",
+   "https://staging.masterfold.com/print-methods/hot-stamping-foil/"
+  ],
+  [
+   3703,
+   "PMS Pantone Colors",
+   "https://staging.masterfold.com/print-methods/pms-pantone-colors/"
+  ]
+ ],
+ "prod_size": "https://staging.masterfold.com/product/curved-shaped-flexy-placemat-aeolos/"
+}
