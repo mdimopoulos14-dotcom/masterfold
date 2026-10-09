@@ -70,6 +70,49 @@ function mf_conditional_styles() {
 	);
 }
 
+/*
+ * Scripts that are only needed when their plugin's markup is on the page.
+ * Same rule as the stylesheets: dropped when none of the markers appear in
+ * the rendered page, together with their inline before/after/extra data.
+ */
+function mf_conditional_scripts() {
+	$slide_anything = array( 'owl-carousel', 'sa_owl' );
+	$maps           = array( 'mega-interactivemap', 'interactive-map' );
+	$royal_widgets  = array( 'elementor-widget-wpr-' );
+	return apply_filters(
+		'mf_conditional_scripts',
+		array(
+			// Slide Anything (owl carousel + lightgallery).
+			'owl_carousel_js'          => $slide_anything,
+			'mousewheel_js'            => $slide_anything,
+			'owl_thumbs_js'            => $slide_anything,
+			'lightgallery_js'          => $slide_anything,
+			'lightgallery_video_js'    => $slide_anything,
+			'lightgallery_zoom_js'     => $slide_anything,
+			'lightgallery_autoplay_js' => $slide_anything,
+			'vimeo_player_js'          => $slide_anything,
+			// Super Interactive Maps (also loads Google's chart loaders).
+			'mega-chart'               => $maps,
+			'mega-google-load'         => $maps,
+			'PanZoom'                  => $maps,
+			'interactivemap'           => $maps,
+			// Royal Elementor Addons libraries used by its own widgets/effects.
+			'wpr-particles'            => array( 'wpr-particle-yes' ),
+			'wpr-jarallax'             => array( 'wpr-jarallax-yes' ),
+			'wpr-parallax-hover'       => array( 'wpr-parallax-yes' ),
+			'wpr-isotope'              => $royal_widgets,
+			'wpr-slick'                => $royal_widgets,
+			'wpr-lightgallery'         => $royal_widgets,
+			// Simply Gallery lightbox.
+			'pgc-simply-gallery-plugin-lightbox-script' => array( 'pgc-sgb', 'simply-gallery' ),
+			// Fancybox v3 (binds to data-fancybox links).
+			'fancybox-v3-js'           => array( 'data-fancybox' ),
+			// 3D FlipBook.
+			'3d-flip-book-client-locale-loader' => array( '3d-flip-book', 'fb3d' ),
+		)
+	);
+}
+
 function mf_strip_unused_styles( $html ) {
 	if ( false === stripos( $html, '</head>' ) ) {
 		return $html;
@@ -91,6 +134,20 @@ function mf_strip_unused_styles( $html ) {
 		}
 		if ( ! $used ) {
 			$html = preg_replace( '/<link\b[^>]*\bid=[\'"]' . preg_quote( $handle, '/' ) . '[\'"][^>]*>\s*/i', '', $html, 1 );
+		}
+	}
+
+	foreach ( mf_conditional_scripts() as $handle => $markers ) {
+		$used = false;
+		foreach ( $markers as $marker ) {
+			if ( false !== strpos( $body, $marker ) ) {
+				$used = true;
+				break;
+			}
+		}
+		if ( ! $used ) {
+			$id   = preg_quote( $handle, '/' ) . '-js(?:-extra|-before|-after|-translations)?';
+			$html = preg_replace( '/<script\b[^>]*\bid=[\'"]' . $id . '[\'"][^>]*>.*?<\/script>\s*/is', '', $html );
 		}
 	}
 
