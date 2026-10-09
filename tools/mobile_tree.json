@@ -1,0 +1,1032 @@
+{
+ "menu-main": {
+  "back": null,
+  "back_label": null,
+  "items": [
+   {
+    "t": "Products",
+    "href": "#",
+    "sub": "menu-products",
+    "li_class": "has-submenu",
+    "target": "",
+    "li_style": false
+   },
+   {
+    "t": "Materials",
+    "href": "#",
+    "sub": "menu-materials",
+    "li_class": "has-submenu",
+    "target": "",
+    "li_style": false
+   },
+   {
+    "t": "About",
+    "href": "#",
+    "sub": "menu-about",
+    "li_class": "has-submenu",
+    "target": "",
+    "li_style": false
+   },
+   {
+    "t": "Clients",
+    "href": "/partners/",
+    "sub": null,
+    "li_class": "",
+    "target": "",
+    "li_style": false
+   },
+   {
+    "t": "Contact",
+    "href": "/contact/",
+    "sub": null,
+    "li_class": "",
+    "target": "",
+    "li_style": false
+   },
+   {
+    "t": "The Lexicon",
+    "href": "https://thelexicon.com/",
+    "sub": null,
+    "li_class": "lexicon-btn-prim lexicon-btn-prim-style",
+    "target": "_blank",
+    "li_style": true
+   }
+  ]
+ },
+ "menu-materials": {
+  "back": "menu-main",
+  "back_label": "ALL",
+  "items": [
+   {
+    "t": "Standard",
+    "href": "#",
+    "sub": "standard",
+    "li_class": "has-submenu",
+    "target": "",
+    "li_style": false
+   },
+   {
+    "t": "Sustainable",
+    "href": "#",
+    "sub": "sustainable",
+    "li_class": "has-submenu",
+    "target": "",
+    "li_style": false
+   }
+  ]
+ },
+ "menu-about": {
+  "back": "menu-main",
+  "back_label": "ALL",
+  "items": [
+   {
+    "t": "Printing",
+    "href": "#",
+    "sub": "imprint",
+    "li_class": "has-submenu",
+    "target": "",
+    "li_style": false
+   },
+   {
+    "t": "Our Story",
+    "href": "/about-us/",
+    "sub": null,
+    "li_class": "",
+    "target": "",
+    "li_style": false
+   },
+   {
+    "t": "FAQ",
+    "href": "/faq/",
+    "sub": null,
+    "li_class": "",
+    "target": "",
+    "li_style": false
+   },
+   {
+    "t": "Blog",
+    "href": "/blog",
+    "sub": null,
+    "li_class": "",
+    "target": "",
+    "li_style": false
+   }
+  ]
+ },
+ "menu-products": {
+  "back": "menu-main",
+  "back_label": "ALL",
+  "items": [
+   {
+    "t": "Restaurant",
+    "href": "#",
+    "sub": "restaurant",
+    "li_class": "has-submenu",
+    "target": "",
+    "li_style": false
+   },
+   {
+    "t": "Room",
+    "href": "#",
+    "sub": "room",
+    "li_class": "has-submenu",
+    "target": "",
+    "li_style": false
+   },
+   {
+    "t": "Reception",
+    "href": "#",
+    "sub": "reception",
+    "li_class": "has-submenu",
+    "target": "",
+    "li_style": false
+   },
+   {
+    "t": "Twists & Turns",
+    "href": "#",
+    "sub": "twists",
+    "li_class": "has-submenu",
+    "target": "",
+    "li_style": false
+   },
+   {
+    "t": "Packaging",
+    "href": "#",
+    "sub": "packaging",
+    "li_class": "has-submenu",
+    "target": "",
+    "li_style": false
+   },
+   {
+    "t": "Branded Merchandise",
+    "href": "#",
+    "sub": "branded",
+    "li_class": "has-submenu",
+    "target": "",
+    "li_style": false
+   },
+   {
+    "t": "Stationery",
+    "href": "#",
+    "sub": "stationery",
+    "li_class": "has-submenu",
+    "target": "",
+    "li_style": false
+   },
+   {
+    "t": "Endless Exploration",
+    "href": "#",
+    "sub": "endless",
+    "li_class": "has-submenu",
+    "target": "",
+    "li_style": false
+   }
+  ]
+ },
+ "restaurant": {
+  "back": "menu-products",
+  "back_label": "Products",
+  "items": [
+   {
+    "t": "Menu Covers",
+    "href": "/product-category/restaurant/restaurant-menu/",
+    "sub": null,
+    "li_class": "",
+    "target": "",
+    "li_style": false
+   },
+   {
+    "t": "Bill Folders",
+    "href": "/product-category/restaurant/bill-folder/",
+    "sub": null,
+    "li_class": "",
+    "target": "",
+    "li_style": false
+   },
+   {
+    "t": "Placemats",
+    "href": "/product-category/restaurant/placemat/",
+    "sub": null,
+    "li_class": "",
+    "target": "",
+    "li_style": false
+   },
+   {
+    "t": "Coasters",
+    "href": "/product-category/restaurant/coaster/",
+    "sub": null,
+    "li_class": "",
+    "target": "",
+    "li_style": false
+   },
+   {
+    "t": "Bread Baskets",
+    "href": "/product-category/restaurant/bread-basket/",
+    "sub": null,
+    "li_class": "",
+    "target": "",
+    "li_style": false
+   }
+  ]
+ },
+ "room": {
+  "back": "menu-products",
+  "back_label": "Products",
+  "items": [
+   {
+    "t": "Do Not Disturb Signs",
+    "href": "/product-category/room/do-not-disturb-signs/",
+    "sub": null,
+    "li_class": "",
+    "target": "",
+    "li_style": false
+   },
+   {
+    "t": "Bottle Hangers",
+    "href": "/product-category/room/bottle-hanger/",
+    "sub": null,
+    "li_class": "",
+    "target": "",
+    "li_style": false
+   },
+   {
+    "t": "Guest Directories",
+    "href": "/product-category/room/guest-directories/",
+    "sub": null,
+    "li_class": "",
+    "target": "",
+    "li_style": false
+   },
+   {
+    "t": "Paper Hangers",
+    "href": "/product-category/room/paper-hanger/",
+    "sub": null,
+    "li_class": "",
+    "target": "",
+    "li_style": false
+   },
+   {
+    "t": "Beach Bags",
+    "href": "/product-category/room/beach-bag/",
+    "sub": null,
+    "li_class": "",
+    "target": "",
+    "li_style": false
+   },
+   {
+    "t": "Messaging Signs",
+    "href": "/product-category/room/messaging-sign/",
+    "sub": null,
+    "li_class": "",
+    "target": "",
+    "li_style": false
+   },
+   {
+    "t": "Laundry Bags",
+    "href": "/product-category/room/laundry-bag/",
+    "sub": null,
+    "li_class": "",
+    "target": "",
+    "li_style": false
+   },
+   {
+    "t": "Informative Cards",
+    "href": "/product-category/room/informative-card/",
+    "sub": null,
+    "li_class": "",
+    "target": "",
+    "li_style": false
+   },
+   {
+    "t": "Tea-Coffee Boxes",
+    "href": "/product-category/room/tea-coffee-box/",
+    "sub": null,
+    "li_class": "",
+    "target": "",
+    "li_style": false
+   },
+   {
+    "t": "Trays",
+    "href": "/product-category/room/tray/",
+    "sub": null,
+    "li_class": "",
+    "target": "",
+    "li_style": false
+   }
+  ]
+ },
+ "reception": {
+  "back": "menu-products",
+  "back_label": "Products",
+  "items": [
+   {
+    "t": "Key Cards",
+    "href": "/product-category/reception/key-cards/",
+    "sub": null,
+    "li_class": "",
+    "target": "",
+    "li_style": false
+   },
+   {
+    "t": "Key Card Holders",
+    "href": "/product-category/reception/key-card-holders/",
+    "sub": null,
+    "li_class": "",
+    "target": "",
+    "li_style": false
+   },
+   {
+    "t": "Z-Key Holders",
+    "href": "/product-category/reception/z-key-holder/",
+    "sub": null,
+    "li_class": "",
+    "target": "",
+    "li_style": false
+   },
+   {
+    "t": "Luggage Tags",
+    "href": "/product-category/reception/premium-l-tags/",
+    "sub": null,
+    "li_class": "",
+    "target": "",
+    "li_style": false
+   },
+   {
+    "t": "Maps",
+    "href": "/product-category/reception/maps/",
+    "sub": null,
+    "li_class": "",
+    "target": "",
+    "li_style": false
+   },
+   {
+    "t": "Check-In Folders",
+    "href": "/product-category/reception/check-in-folder/",
+    "sub": null,
+    "li_class": "",
+    "target": "",
+    "li_style": false
+   },
+   {
+    "t": "Memory Books",
+    "href": "/product-category/reception/memory-book/",
+    "sub": null,
+    "li_class": "",
+    "target": "",
+    "li_style": false
+   },
+   {
+    "t": "Loyalty Cards",
+    "href": "/product-category/reception/loyalty-card/",
+    "sub": null,
+    "li_class": "",
+    "target": "",
+    "li_style": false
+   },
+   {
+    "t": "Towel Cards",
+    "href": "/product-category/reception/towel-card/",
+    "sub": null,
+    "li_class": "",
+    "target": "",
+    "li_style": false
+   },
+   {
+    "t": "Signage",
+    "href": "/product-category/reception/signage/",
+    "sub": null,
+    "li_class": "",
+    "target": "",
+    "li_style": false
+   },
+   {
+    "t": "Wristband RFID",
+    "href": "/product-category/reception/wristband-rfid/",
+    "sub": null,
+    "li_class": "",
+    "target": "",
+    "li_style": false
+   }
+  ]
+ },
+ "twists": {
+  "back": "menu-products",
+  "back_label": "Products",
+  "items": [
+   {
+    "t": "Z-Fold Cards",
+    "href": "/product-category/twists-turns/z-fold-card/",
+    "sub": null,
+    "li_class": "",
+    "target": "",
+    "li_style": false
+   },
+   {
+    "t": "Card Presentation",
+    "href": "/product-category/twists-turns/card-presentation/",
+    "sub": null,
+    "li_class": "",
+    "target": "",
+    "li_style": false
+   },
+   {
+    "t": "Experience Cards",
+    "href": "/product-category/twists-turns/experience-cards/",
+    "sub": null,
+    "li_class": "",
+    "target": "",
+    "li_style": false
+   },
+   {
+    "t": "Pops",
+    "href": "/product-category/twists-turns/pops/",
+    "sub": null,
+    "li_class": "",
+    "target": "",
+    "li_style": false
+   },
+   {
+    "t": "Airport Welcome Signs",
+    "href": "/product-category/twists-turns/airport-welcome-sign/",
+    "sub": null,
+    "li_class": "",
+    "target": "",
+    "li_style": false
+   },
+   {
+    "t": "QR Cubes",
+    "href": "/product-category/twists-turns/qr-cube/",
+    "sub": null,
+    "li_class": "",
+    "target": "",
+    "li_style": false
+   },
+   {
+    "t": "QR Stands",
+    "href": "/product-category/twists-turns/qr-stand/",
+    "sub": null,
+    "li_class": "",
+    "target": "",
+    "li_style": false
+   }
+  ]
+ },
+ "branded": {
+  "back": "menu-products",
+  "back_label": "Products",
+  "items": [
+   {
+    "t": "Key Rings",
+    "href": "/product-category/branded-merchandise/key-ring/",
+    "sub": null,
+    "li_class": "",
+    "target": "",
+    "li_style": false
+   },
+   {
+    "t": "Bags, Carriers & Beyond",
+    "href": "/product-category/branded-merchandise/bags-carriers-beyond/",
+    "sub": null,
+    "li_class": "",
+    "target": "",
+    "li_style": false
+   },
+   {
+    "t": "Designed to Wear",
+    "href": "/product-category/branded-merchandise/designed-to-wear/",
+    "sub": null,
+    "li_class": "",
+    "target": "",
+    "li_style": false
+   },
+   {
+    "t": "Guest Favourite Accessories",
+    "href": "/product-category/branded-merchandise/guest-favourite-accessories/",
+    "sub": null,
+    "li_class": "",
+    "target": "",
+    "li_style": false
+   },
+   {
+    "t": "Smart Tools for Staff",
+    "href": "/product-category/branded-merchandise/smart-tools-for-staff/",
+    "sub": null,
+    "li_class": "",
+    "target": "",
+    "li_style": false
+   },
+   {
+    "t": "Cork Creations",
+    "href": "/product-category/branded-merchandise/cork-creations/",
+    "sub": null,
+    "li_class": "",
+    "target": "",
+    "li_style": false
+   },
+   {
+    "t": "The Kids Collection",
+    "href": "/product-category/branded-merchandise/the-kids-collection/",
+    "sub": null,
+    "li_class": "",
+    "target": "",
+    "li_style": false
+   },
+   {
+    "t": "The Pet Collection",
+    "href": "/product-category/branded-merchandise/the-pet-collection/",
+    "sub": null,
+    "li_class": "",
+    "target": "",
+    "li_style": false
+   }
+  ]
+ },
+ "packaging": {
+  "back": "menu-products",
+  "back_label": "Products",
+  "items": [
+   {
+    "t": "Boxes",
+    "href": "/product-category/packaging/boxes/",
+    "sub": null,
+    "li_class": "",
+    "target": "",
+    "li_style": false
+   },
+   {
+    "t": "Lunch Boxes",
+    "href": "/product-category/packaging/lunch-box/",
+    "sub": null,
+    "li_class": "",
+    "target": "",
+    "li_style": false
+   },
+   {
+    "t": "Bags",
+    "href": "/product-category/packaging/bags/",
+    "sub": null,
+    "li_class": "",
+    "target": "",
+    "li_style": false
+   }
+  ]
+ },
+ "stationery": {
+  "back": "menu-products",
+  "back_label": "Products",
+  "items": [
+   {
+    "t": "Business Cards",
+    "href": "/product-category/stationery/business-card/",
+    "sub": null,
+    "li_class": "",
+    "target": "",
+    "li_style": false
+   },
+   {
+    "t": "Envelopes",
+    "href": "/product-category/stationery/envelope/",
+    "sub": null,
+    "li_class": "",
+    "target": "",
+    "li_style": false
+   },
+   {
+    "t": "Presentation Folders",
+    "href": "/product-category/stationery/presentation-folder/",
+    "sub": null,
+    "li_class": "",
+    "target": "",
+    "li_style": false
+   },
+   {
+    "t": "Pens - Pencils",
+    "href": "/product-category/stationery/pen-pencil/",
+    "sub": null,
+    "li_class": "",
+    "target": "",
+    "li_style": false
+   },
+   {
+    "t": "Notepads",
+    "href": "/product-category/stationery/notepad/",
+    "sub": null,
+    "li_class": "",
+    "target": "",
+    "li_style": false
+   },
+   {
+    "t": "Flyer - Leaflets",
+    "href": "/product-category/stationery/flyer-leaflet/",
+    "sub": null,
+    "li_class": "",
+    "target": "",
+    "li_style": false
+   },
+   {
+    "t": "Bookmarks",
+    "href": "/product-category/stationery/bookmark/",
+    "sub": null,
+    "li_class": "",
+    "target": "",
+    "li_style": false
+   },
+   {
+    "t": "Notebooks",
+    "href": "/product-category/stationery/notebook/",
+    "sub": null,
+    "li_class": "",
+    "target": "",
+    "li_style": false
+   },
+   {
+    "t": "Letterheads",
+    "href": "/product-category/stationery/letterhead/",
+    "sub": null,
+    "li_class": "",
+    "target": "",
+    "li_style": false
+   },
+   {
+    "t": "Postcards",
+    "href": "/product-category/stationery/postcards/",
+    "sub": null,
+    "li_class": "",
+    "target": "",
+    "li_style": false
+   },
+   {
+    "t": "Diaries - Planners",
+    "href": "/product-category/stationery/diaries-planners/",
+    "sub": null,
+    "li_class": "",
+    "target": "",
+    "li_style": false
+   }
+  ]
+ },
+ "endless": {
+  "back": "menu-products",
+  "back_label": "Products",
+  "items": [
+   {
+    "t": "Magazine - Brochures",
+    "href": "/product-category/endless-exploration/magazine-brochure/",
+    "sub": null,
+    "li_class": "",
+    "target": "",
+    "li_style": false
+   },
+   {
+    "t": "Games",
+    "href": "/product-category/endless-exploration/games/",
+    "sub": null,
+    "li_class": "",
+    "target": "",
+    "li_style": false
+   },
+   {
+    "t": "Indoor Signage",
+    "href": "/product-category/endless-exploration/indoor-signage/",
+    "sub": null,
+    "li_class": "",
+    "target": "",
+    "li_style": false
+   },
+   {
+    "t": "Outdoor Signage",
+    "href": "/product-category/endless-exploration/outdoor-signage/",
+    "sub": null,
+    "li_class": "",
+    "target": "",
+    "li_style": false
+   },
+   {
+    "t": "In-Room Decoration",
+    "href": "/product-category/endless-exploration/in-room-decoration/",
+    "sub": null,
+    "li_class": "",
+    "target": "",
+    "li_style": false
+   }
+  ]
+ },
+ "standard": {
+  "back": "menu-main",
+  "back_label": "Materials",
+  "items": [
+   {
+    "t": "Paper",
+    "href": "#",
+    "sub": "paper",
+    "li_class": "has-submenu",
+    "target": "",
+    "li_style": false
+   },
+   {
+    "t": "Hard",
+    "href": "#",
+    "sub": "hard",
+    "li_class": "has-submenu",
+    "target": "",
+    "li_style": false
+   },
+   {
+    "t": "Flexy",
+    "href": "#",
+    "sub": "flexy",
+    "li_class": "has-submenu",
+    "target": "",
+    "li_style": false
+   }
+  ]
+ },
+ "sustainable": {
+  "back": "menu-main",
+  "back_label": "Materials",
+  "items": [
+   {
+    "t": "BioFlex",
+    "href": "#",
+    "sub": "flexy-s",
+    "li_class": "has-submenu",
+    "target": "",
+    "li_style": false
+   },
+   {
+    "t": "Organic Surfaces",
+    "href": "#",
+    "sub": "boards",
+    "li_class": "has-submenu",
+    "target": "",
+    "li_style": false
+   },
+   {
+    "t": "Surfaces",
+    "href": "#",
+    "sub": "surfaces",
+    "li_class": "has-submenu",
+    "target": "",
+    "li_style": false
+   }
+  ]
+ },
+ "paper": {
+  "back": "menu-products",
+  "back_label": "Standard",
+  "items": [
+   {
+    "t": "Standard Paper",
+    "href": "/materials/standard-papers",
+    "sub": null,
+    "li_class": "",
+    "target": "",
+    "li_style": false
+   },
+   {
+    "t": "Premium Paper",
+    "href": "/materials/premium-papers",
+    "sub": null,
+    "li_class": "",
+    "target": "",
+    "li_style": false
+   },
+   {
+    "t": "Packaging Paper",
+    "href": "/materials/packaging-papers",
+    "sub": null,
+    "li_class": "",
+    "target": "",
+    "li_style": false
+   },
+   {
+    "t": "Binding Paper",
+    "href": "/materials/binding-papers",
+    "sub": null,
+    "li_class": "",
+    "target": "",
+    "li_style": false
+   }
+  ]
+ },
+ "hard": {
+  "back": "menu-products",
+  "back_label": "Standard",
+  "items": [
+   {
+    "t": "Wood",
+    "href": "/materials/wood/",
+    "sub": null,
+    "li_class": "",
+    "target": "",
+    "li_style": false
+   },
+   {
+    "t": "Acrylic",
+    "href": "/materials/acrylic/",
+    "sub": null,
+    "li_class": "",
+    "target": "",
+    "li_style": false
+   },
+   {
+    "t": "PVC",
+    "href": "/materials/pvc/",
+    "sub": null,
+    "li_class": "",
+    "target": "",
+    "li_style": false
+   }
+  ]
+ },
+ "flexy": {
+  "back": "menu-products",
+  "back_label": "Standard",
+  "items": [
+   {
+    "t": "PU Leather",
+    "href": "/materials/pu-leather/",
+    "sub": null,
+    "li_class": "",
+    "target": "",
+    "li_style": false
+   },
+   {
+    "t": "Leather",
+    "href": "/materials/leather/",
+    "sub": null,
+    "li_class": "",
+    "target": "",
+    "li_style": false
+   },
+   {
+    "t": "Fabric",
+    "href": "/materials/fabric/",
+    "sub": null,
+    "li_class": "",
+    "target": "",
+    "li_style": false
+   }
+  ]
+ },
+ "flexy-s": {
+  "back": "menu-products",
+  "back_label": "Sustainable",
+  "items": [
+   {
+    "t": "Recycled Leather",
+    "href": "/materials/sustainable-materials/sustainable-recycled-leather/",
+    "sub": null,
+    "li_class": "",
+    "target": "",
+    "li_style": false
+   },
+   {
+    "t": "Ocean Fabric",
+    "href": "/materials/ocean-fabric/",
+    "sub": null,
+    "li_class": "",
+    "target": "",
+    "li_style": false
+   },
+   {
+    "t": "Cork",
+    "href": "/materials/cork/",
+    "sub": null,
+    "li_class": "",
+    "target": "",
+    "li_style": false
+   }
+  ]
+ },
+ "imprint": {
+  "back": "menu-products",
+  "back_label": "About",
+  "items": [
+   {
+    "t": "Offset",
+    "href": "/print-methods/offset-printing/",
+    "sub": null,
+    "li_class": "",
+    "target": "",
+    "li_style": false
+   },
+   {
+    "t": "Digital",
+    "href": "/print-methods/digital-printing/",
+    "sub": null,
+    "li_class": "",
+    "target": "",
+    "li_style": false
+   },
+   {
+    "t": "PMS - Pantone Colors",
+    "href": "/print-methods/pms-pantone-colors/",
+    "sub": null,
+    "li_class": "",
+    "target": "",
+    "li_style": false
+   },
+   {
+    "t": "Hot Stamping - Foil",
+    "href": "/print-methods/hot-stamping-foil/",
+    "sub": null,
+    "li_class": "",
+    "target": "",
+    "li_style": false
+   },
+   {
+    "t": "Laser Engraving",
+    "href": "/print-methods/laser-engraving/",
+    "sub": null,
+    "li_class": "",
+    "target": "",
+    "li_style": false
+   },
+   {
+    "t": "Silk Screen",
+    "href": "/print-methods/silk-screen/",
+    "sub": null,
+    "li_class": "",
+    "target": "",
+    "li_style": false
+   },
+   {
+    "t": "Sublimation",
+    "href": "/print-methods/sublimation/",
+    "sub": null,
+    "li_class": "",
+    "target": "",
+    "li_style": false
+   },
+   {
+    "t": "Embroidery",
+    "href": "/print-methods/embroidery/",
+    "sub": null,
+    "li_class": "",
+    "target": "",
+    "li_style": false
+   }
+  ]
+ },
+ "boards": {
+  "back": "menu-products",
+  "back_label": "Sustainable",
+  "items": [
+   {
+    "t": "Pure Soft",
+    "href": "/materials/sustainable-materials/pure-soft/",
+    "sub": null,
+    "li_class": "",
+    "target": "",
+    "li_style": false
+   },
+   {
+    "t": "Terra Solid",
+    "href": "/materials/sustainable-materials/terra-solid/",
+    "sub": null,
+    "li_class": "",
+    "target": "",
+    "li_style": false
+   },
+   {
+    "t": "Marble Feel",
+    "href": "/materials/sustainable-materials/marble-feel/",
+    "sub": null,
+    "li_class": "",
+    "target": "",
+    "li_style": false
+   }
+  ]
+ },
+ "surfaces": {
+  "back": "menu-products",
+  "back_label": "Sustainable",
+  "items": [
+   {
+    "t": "Coffee",
+    "href": "/materials/coffee/",
+    "sub": null,
+    "li_class": "",
+    "target": "",
+    "li_style": false
+   },
+   {
+    "t": "Natural Surfaces",
+    "href": "/materials/natural-surfaces/",
+    "sub": null,
+    "li_class": "",
+    "target": "",
+    "li_style": false
+   },
+   {
+    "t": "Wheat Grain",
+    "href": "/materials/wheat-grain/",
+    "sub": null,
+    "li_class": "",
+    "target": "",
+    "li_style": false
+   }
+  ]
+ }
+}
