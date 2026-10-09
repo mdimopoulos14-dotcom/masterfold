@@ -225,5 +225,7 @@
    "https://staging.masterfold.com/print-methods/pms-pantone-colors/"
   ]
  ],
- "prod_size": "https://staging.masterfold.com/product/curved-shaped-flexy-placemat-aeolos/"
+ "prod_size": "https://staging.masterfold.com/product/curved-shaped-flexy-placemat-aeolos/",
+ "wishlist": "https://staging.masterfold.com/my-wishlist/",
+ "myaccount": "https://staging.masterfold.com/my-account/"
 }

@@ -3,9 +3,9 @@ const [,, outDir] = process.argv; const urls = JSON.parse(fs.readFileSync('urls.
 (async () => {
   const b = await chromium.launch();
   for (const [vn, vp] of [['d',{width:1440,height:900}],['m',{width:390,height:844,isMobile:true,hasTouch:true}]]) {
-    const ctx = await b.newContext({viewport:{width:vp.width,height:vp.height}, isMobile:!!vp.isMobile, hasTouch:!!vp.hasTouch});
+    const ctx = await b.newContext({viewport:{width:vp.width,height:vp.height}, isMobile:!!vp.isMobile, hasTouch:!!vp.hasTouch, deviceScaleFactor:1, ...(process.env.LOGGEDIN ? {storageState: process.env.HOME + '/nm/.loggedin.json'} : {})});
     const p = await ctx.newPage();
-    for (const k of Object.keys(urls).filter(k=>k.startsWith('prod_') && (!process.argv[3] || process.argv.slice(3).includes(k)))) {
+    for (const k of Object.keys(urls).filter(k=>typeof urls[k]==='string' && (process.argv[3] ? process.argv.slice(3).includes(k) : k.startsWith('prod_')))) {
       await p.goto(urls[k], {waitUntil:'networkidle', timeout:90000}).catch(()=>{});
       await p.addStyleTag({content:'*{animation:none!important;transition:none!important} .elementor-popup-modal,.dialog-widget,.cky-consent-container,.cky-overlay,.cky-btn-revisit-wrapper{display:none!important}'}).catch(()=>{});
       // open every closed accordion in the visible product column
