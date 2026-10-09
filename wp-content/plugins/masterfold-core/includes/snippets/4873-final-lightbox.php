@@ -2,10 +2,15 @@
 /**
  * FINAL LIGHTBOX
  *
- * Moved from WPCode snippet #4873 (location: everywhere). Code unchanged.
+ * Moved from WPCode snippet #4873 (location: everywhere).
+ * Change: only printed on pages that show attribute swatches.
  */
 
 add_action('wp_footer', function () {
+    // Only pages that show attribute swatches use the lightbox (Masterfold Core).
+    if ( function_exists( 'mf_page_has_swatches' ) && ! mf_page_has_swatches() ) {
+        return;
+    }
     ?>
     <style>
 		#copyFeedback {
