@@ -9,6 +9,30 @@
 		var mainId = root.getAttribute('data-main');
 		var stack = [mainId];
 
+		// Move the panel to <body>: a CSS filter/transform on a header container
+		// would otherwise make "position: fixed" relative to that container and
+		// park the closed panel on screen.
+		var portal = document.createElement('div');
+		portal.className = 'mf-mobile-menu-root mf-mobile-menu-portal';
+		portal.appendChild(overlay);
+		portal.appendChild(menu);
+
+		// Header styles (e.g. a colour filter) can change after load, so the
+		// panel takes them over each time it opens.
+		function syncFilter() {
+			var filter = '';
+			for (var el = root.parentElement; el && el !== document.body; el = el.parentElement) {
+				var f = getComputedStyle(el).filter;
+				if (f && f !== 'none') { filter = filter ? f + ' ' + filter : f; }
+			}
+			overlay.style.filter = filter;
+			menu.style.filter = filter;
+		}
+		syncFilter();
+		// Keep it first in the document, like the original header menu, so its
+		// panel IDs (#reception, …) are found before anything else on the page.
+		document.body.insertBefore(portal, document.body.firstChild);
+
 		function panel(id) { return document.getElementById(id); }
 
 		function slideIn(el, from) {
@@ -35,6 +59,7 @@
 		}
 
 		function open() {
+			syncFilter();
 			menu.classList.add('open');
 			overlay.classList.add('visible');
 			slideIn(panel(mainId), 'right');

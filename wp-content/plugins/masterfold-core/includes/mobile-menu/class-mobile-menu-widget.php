@@ -117,7 +117,6 @@ class MF_Mobile_Menu_Widget extends \Elementor\Widget_Base {
 	 * One panel (nav.menu-slide) per item that has children.
 	 */
 	private function render_panel( $panel_id, $parent_id, $map, $back, $settings, $is_main = false ) {
-		$uid   = $this->get_id();
 		$close = $this->close_button( $settings['close_icon']['url'] ?? '' );
 
 		echo '<nav class="menu-slide ' . ( $is_main ? 'active' : 'hidden' ) . '" id="' . esc_attr( $panel_id ) . '"' . ( $is_main ? '' : ' aria-hidden="true"' ) . '>';
@@ -142,7 +141,7 @@ class MF_Mobile_Menu_Widget extends \Elementor\Widget_Base {
 
 			echo '<li' . ( $classes ? ' class="' . esc_attr( implode( ' ', $classes ) ) . '"' : '' ) . '>';
 			if ( $has_child ) {
-				echo '<a href="#" data-submenu="' . esc_attr( 'mf-mm-' . $uid . '-' . $item->ID ) . '">' . esc_html( $item->title ) . ' ' . $this->arrow() . '</a>'; // phpcs:ignore WordPress.Security.EscapeOutput
+				echo '<a href="#" data-submenu="' . esc_attr( $this->panel_id( $item ) ) . '">' . esc_html( $item->title ) . ' ' . $this->arrow() . '</a>'; // phpcs:ignore WordPress.Security.EscapeOutput
 			} else {
 				$arrow = '_blank' === $item->target ? ' ' . $this->arrow() : '';
 				echo '<a href="' . esc_url( $item->url ) . '"' . $target . '>' . esc_html( $item->title ) . $arrow . '</a>'; // phpcs:ignore WordPress.Security.EscapeOutput
@@ -153,7 +152,7 @@ class MF_Mobile_Menu_Widget extends \Elementor\Widget_Base {
 
 		foreach ( $sub_panels as $item ) {
 			$this->render_panel(
-				'mf-mm-' . $uid . '-' . $item->ID,
+				$this->panel_id( $item ),
 				(int) $item->ID,
 				$map,
 				array(
@@ -167,6 +166,27 @@ class MF_Mobile_Menu_Widget extends \Elementor\Widget_Base {
 
 	private $panel_titles = array();
 
+	private $panel_ids = array();
+
+	/**
+	 * Panel ID for a menu item: its title as a slug (e.g. "reception"), like the
+	 * original hand-coded menu. Links such as /products/#reception rely on the
+	 * first element with that ID being a hidden menu panel, so the page itself
+	 * does not jump when they open.
+	 */
+	private function panel_id( $item ) {
+		if ( ! isset( $this->panel_ids[ $item->ID ] ) ) {
+			$base = sanitize_title( $item->title );
+			$id   = $base;
+			$n    = 2;
+			while ( in_array( $id, $this->panel_ids, true ) || 'menu-main' === $id ) {
+				$id = $base . '-' . $n++;
+			}
+			$this->panel_ids[ $item->ID ] = $id;
+		}
+		return $this->panel_ids[ $item->ID ];
+	}
+
 	protected function render() {
 		$settings = $this->get_settings_for_display();
 		$map      = $this->get_children_map( $settings['menu'] );
@@ -177,13 +197,16 @@ class MF_Mobile_Menu_Widget extends \Elementor\Widget_Base {
 			return;
 		}
 
+		$this->panel_ids = array();
 		foreach ( $map as $items ) {
 			foreach ( $items as $item ) {
-				$this->panel_titles[ 'mf-mm-' . $this->get_id() . '-' . $item->ID ] = $item->title;
+				if ( ! empty( $map[ (int) $item->ID ] ) ) {
+					$this->panel_titles[ $this->panel_id( $item ) ] = $item->title;
+				}
 			}
 		}
 
-		$main = 'mf-mm-' . $this->get_id() . '-main';
+		$main = 'menu-main';
 		?>
 		<div class="mf-mobile-menu-root" data-main="<?php echo esc_attr( $main ); ?>">
 			<div class="custom-mobile-header">
