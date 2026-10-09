@@ -2,7 +2,9 @@
 /**
  * PRODUCT PAGE IMAGE SLIDER MOBILE
  *
- * Moved from WPCode snippet #38453 (location: everywhere). Code unchanged.
+ * Moved from WPCode snippet #38453 (location: everywhere).
+ * Changes: Swiper is served from this plugin instead of the jsdelivr CDN, slides carry
+ * a srcset so phones download a phone-sized image, and the first slide is fetched first.
  */
 
 // Add shortcode [product_images_slider]
@@ -25,8 +27,8 @@ function dynamic_product_images_slider() {
     if ( empty( $attachment_ids ) ) return '';
 
     // Enqueue Swiper JS/CSS
-    wp_enqueue_style('swiper-css', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css');
-    wp_enqueue_script('swiper-js', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js', array(), null, true);
+    wp_enqueue_style('swiper-css', MF_CORE_URL . 'assets/vendor/swiper/swiper-bundle.min.css', array(), '11.2.10');
+    wp_enqueue_script('swiper-js', MF_CORE_URL . 'assets/vendor/swiper/swiper-bundle.min.js', array(), '11.2.10', true);
 
     $group_id = 'lightbox-product-gallery';
 
@@ -36,8 +38,9 @@ function dynamic_product_images_slider() {
             <span class="wood-images-container" style="display: flex; flex-wrap: wrap; gap: 0px;">
                 <div class="swiper product-images-slider">
                     <div class="swiper-wrapper">
-                        <?php foreach ( $attachment_ids as $attachment_id ) :
+                        <?php foreach ( $attachment_ids as $slide_index => $attachment_id ) :
                             $image_url = wp_get_attachment_image_url( $attachment_id, 'large' );
+                            $srcset    = wp_get_attachment_image_srcset( $attachment_id, 'large' );
                             $alt = get_post_meta( $attachment_id, '_wp_attachment_image_alt', true );
                         ?>
                             <div class="swiper-slide">
@@ -47,6 +50,8 @@ function dynamic_product_images_slider() {
                                         data-caption="<?php echo esc_attr( $alt ); ?>"
                                         data-group="<?php echo esc_attr( $group_id ); ?>">
                                         <img src="<?php echo esc_url( $image_url ); ?>"
+                                             <?php if ( $srcset ) : ?>srcset="<?php echo esc_attr( $srcset ); ?>" sizes="(max-width: 600px) 100vw, 600px"<?php endif; ?>
+                                             <?php echo 0 === $slide_index ? 'fetchpriority="high"' : 'loading="lazy" decoding="async"'; ?>
                                              alt="<?php echo esc_attr( $alt ); ?>"
                                              class="wood-images-custom-thumb swatch-trigger"
                                              style="width:100%; height:auto; cursor:pointer;">
