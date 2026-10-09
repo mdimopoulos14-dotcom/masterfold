@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Masterfold Core
  * Description: Site-specific functionality for Masterfold: product attribute sections (Elementor widget), catalog mode, and the custom features that used to live in the theme.
- * Version: 1.7.0
+ * Version: 1.7.1
  * Author: Masterfold
  * Requires Plugins: woocommerce
  */
@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'MF_CORE_VERSION', '1.7.0' );
+define( 'MF_CORE_VERSION', '1.7.1' );
 define( 'MF_CORE_URL', plugin_dir_url( __FILE__ ) );
 define( 'MF_CORE_DIR', __DIR__ );
 
