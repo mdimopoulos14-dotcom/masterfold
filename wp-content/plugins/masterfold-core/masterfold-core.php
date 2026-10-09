@@ -16,6 +16,7 @@ define( 'MF_CORE_URL', plugin_dir_url( __FILE__ ) );
 define( 'MF_CORE_DIR', __DIR__ );
 
 require_once __DIR__ . '/includes/legacy-theme-functions.php';
+require_once __DIR__ . '/includes/cache/pixel-cache-compat.php';
 
 add_action(
 	'plugins_loaded',
