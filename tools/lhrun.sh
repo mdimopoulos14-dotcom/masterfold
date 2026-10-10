@@ -1,7 +1,7 @@
 #!/bin/bash
 # lhrun.sh TAG : 5 mobile Lighthouse runs per page, prints medians.
-TAG=$1; cd ~/nm/lh
-declare -A U=([home]=https://staging.masterfold.com/ [product]=https://staging.masterfold.com/product/ocean-fabric-wine-list-sani/ [category]=https://staging.masterfold.com/product-category/restaurant/restaurant-menu/ [material]=https://staging.masterfold.com/materials/standard-materials/leather/)
+TAG=$1; HOST=${2:-staging.masterfold.com}; cd ~/nm/lh
+declare -A U=([home]=https://$HOST/ [product]=https://$HOST/product/ocean-fabric-wine-list-sani/ [category]=https://$HOST/product-category/restaurant/restaurant-menu/ [material]=https://$HOST/materials/standard-materials/leather/)
 for p in home product category material; do
   curl -s -o /dev/null "${U[$p]}"   # warm the cache
   for i in 1 2 3 4 5; do
