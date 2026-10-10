@@ -24,8 +24,9 @@ add_action(
 		// The header location wrapper is display:contents so the sticky container
 		// is constrained by <body>, not by the (short) header wrapper. Its ::before
 		// re-applies the wrapper's own top margin, which display:contents drops
-		// (the tiny padding stops that margin merging with the container's).
-		echo '<style id="mf-sticky-header">@media (min-width:1025px){body:not(.elementor-editor-active) .elementor-location-header:has(>.mf-sticky-top){display:contents}body:not(.elementor-editor-active) .elementor-location-header:has(>.mf-sticky-top)::before{content:"";display:block;margin-top:inherit;padding-top:.02px}body:not(.elementor-editor-active) .mf-sticky-top{position:sticky;top:var(--wp-admin--admin-bar--height,0px);z-index:99}}</style>' . "\n";
+		// (the tiny padding stops that margin merging with the container's), and the
+		// container takes over the wrapper's z-index so it stays above other sticky bars.
+		echo '<style id="mf-sticky-header">@media (min-width:1025px){body:not(.elementor-editor-active) .elementor-location-header:has(>.mf-sticky-top){display:contents}body:not(.elementor-editor-active) .elementor-location-header:has(>.mf-sticky-top)::before{content:"";display:block;margin-top:inherit;padding-top:.02px}body:not(.elementor-editor-active) .mf-sticky-top{position:sticky;top:var(--wp-admin--admin-bar--height,0px);z-index:inherit}}</style>' . "\n";
 	},
 	20
 );
