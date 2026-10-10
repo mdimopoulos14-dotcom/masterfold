@@ -170,6 +170,9 @@ add_action(
 		ob_start(
 			function ( $html ) {
 				$html = mf_strip_unused_styles( $html );
+				if ( function_exists( 'mf_early_hide_lazyloaded' ) ) {
+					$html = mf_early_hide_lazyloaded( $html );
+				}
 				return function_exists( 'mf_localize_google_fonts' ) ? mf_localize_google_fonts( $html ) : $html;
 			}
 		);
