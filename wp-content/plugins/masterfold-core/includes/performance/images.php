@@ -48,3 +48,47 @@ add_action(
 	},
 	20
 );
+
+/*
+ * Masterfold Category Slider widget (home page).
+ *
+ * The widget prints each column picture as a bare <img> of the full upload
+ * (about 1075px wide, shown at about 592px), with no size attributes and no
+ * lazy loading. Each picture keeps its file and look; it gains the
+ * attachment's srcset (so the browser picks the right size), width/height
+ * (space reserved, no layout shift). Loading stays eager: native lazy loading
+ * does not trigger inside the slider, so slides would stay blank.
+ */
+function mf_enhance_slider_images( $content, $widget ) {
+	if ( 'masterfold_category_slider' !== $widget->get_name() || false === strpos( $content, '<img' ) ) {
+		return $content;
+	}
+	return preg_replace_callback(
+		'/<img\b[^>]*>/i',
+		function ( $m ) {
+			$img = $m[0];
+			if ( false !== stripos( $img, 'srcset=' ) || ! preg_match( '/\bsrc="([^"]+)"/i', $img, $src ) ) {
+				return $img;
+			}
+			$id = attachment_url_to_postid( $src[1] );
+			if ( ! $id ) {
+				return $img;
+			}
+			$meta = wp_get_attachment_metadata( $id );
+			if ( empty( $meta['width'] ) || empty( $meta['height'] ) ) {
+				return $img;
+			}
+			$add = ' width="' . (int) $meta['width'] . '" height="' . (int) $meta['height'] . '"';
+			$srcset = wp_get_attachment_image_srcset( $id, 'full', $meta );
+			if ( $srcset ) {
+				$add .= ' srcset="' . esc_attr( $srcset ) . '" sizes="(max-width: 767px) 50vw, 600px"';
+			}
+			if ( false === stripos( $img, 'loading=' ) ) {
+				$add .= ' loading="eager"'; // Keeps WordPress from adding loading="lazy".
+			}
+			return preg_replace( '/^<img\b/i', '<img' . $add, $img );
+		},
+		$content
+	);
+}
+add_filter( 'elementor/widget/render_content', 'mf_enhance_slider_images', 20, 2 );
