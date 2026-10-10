@@ -124,6 +124,10 @@ function mf_strip_unused_styles( $html ) {
 	$body       = false === $body_start ? $html : substr( $html, $body_start );
 	$body       = preg_replace( array( '#<script\b[^>]*>.*?</script>#is', '#<style\b[^>]*>.*?</style>#is', '#<link\b[^>]*>#i' ), '', $body );
 
+	if ( function_exists( 'mf_use_slim_wpr_css' ) ) {
+		$html = mf_use_slim_wpr_css( $html, $body );
+	}
+
 	foreach ( mf_conditional_styles() as $handle => $markers ) {
 		$used = false;
 		foreach ( $markers as $marker ) {
