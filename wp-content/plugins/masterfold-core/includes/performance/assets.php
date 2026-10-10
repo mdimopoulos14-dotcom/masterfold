@@ -66,6 +66,8 @@ function mf_conditional_styles() {
 			'woo-category-slider-pro-icon-css'   => array( 'sp-wcsp' ),
 			'sp-wcsp-font-awesome-css'           => array( 'sp-wcsp' ),
 			'sp-wcsp-swiper-css'                 => array( 'sp-wcsp' ),
+			// Fancybox v3 (binds to data-fancybox links).
+			'fancybox-v3-css-css'                => array( 'data-fancybox' ),
 		)
 	);
 }
@@ -170,6 +172,9 @@ add_action(
 		ob_start(
 			function ( $html ) {
 				$html = mf_strip_unused_styles( $html );
+				if ( function_exists( 'mf_localize_cdn_assets' ) ) {
+					$html = mf_localize_cdn_assets( $html );
+				}
 				if ( function_exists( 'mf_early_hide_lazyloaded' ) ) {
 					$html = mf_early_hide_lazyloaded( $html );
 				}
