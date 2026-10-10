@@ -80,7 +80,7 @@ Masterfold Core contains:
 
 ## 4. Housekeeping
 
-- Test customer `mf-test-customer` (user ID 634) was created on staging for logged-in checks; it is deleted before go-live (see section 5).
+- Test customer `mf-test-customer` (user ID 634), created on staging for logged-in checks, has been deleted.
 - Ask the host to raise PHP OPcache memory from 128 MB to 256 MB and
   `max_accelerated_files` to 20000. The site has more PHP files than the
   current cache holds, which slows uncached pages.
@@ -88,29 +88,35 @@ Masterfold Core contains:
 
 ## 5. PageSpeed: where it stands
 
-Lighthouse mobile, median of 5 runs, measured from this environment (absolute
-numbers vary by location; compare relative changes):
+Lighthouse mobile (simulated slow phone), median of 5 runs. Live and staging
+were measured back to back on the same machine, so they compare fairly;
+absolute numbers from PageSpeed Insights will differ.
 
-| Page | Before this work | Now |
-|---|---|---|
-| Home | 49 | 47–49 |
-| Product | 60* | 46 |
-| Category | 49 | 45 |
-| Material | 58 | 60 |
+| Page | Live (original) | Staging (rebuild) | First paint | Largest paint | Layout shift |
+|---|---|---|---|---|---|
+| Home | 39 | 46 | 7.1s → 4.3s | 20.9s → 11.0s | 0 → 0 |
+| Product | no score (Lighthouse error NO_LCP) | 50 | – | – → 8.8s | – → 0 |
+| Category | 39 | 49 | 6.5s → 4.1s | 11.9s → 7.3s | 0.109 → 0 |
+| Material | 50 | 60 | 6.1s → 3.6s | 12.2s → 8.1s | 0 → 0 |
 
-\* earlier product figure was measured before later product-template fixes and
-varies ±10 between sessions in this environment.
+On live, Lighthouse/PageSpeed cannot score product pages at all: the old
+"scroll 1px" snippet (#38454) prevents a Largest Contentful Paint from being
+recorded. That snippet is disabled on staging.
 
-Real-world speed improved much more than the score:
+Beyond the score:
 - cached pages are served in about 0.15 s;
 - uncached pages that crashed or took 5+ s now render normally;
-- the desktop header DOM is down 41 %;
-- about 20 unused scripts and 400 KB of CSS no longer load on most pages.
+- the desktop header DOM is 41 % smaller;
+- about 20 unused scripts no longer load on most pages;
+- on pages without Royal widgets, 400 KB of Royal Addons CSS is replaced by a 44 KB slim copy.
 
-What holds the score back is the combined weight of the plugins that render the
-pages: about 40 active plugins with their own CSS and JavaScript, Elementor
-nested widgets, Royal Addons, Woo Variation Swatches, User Registration and two
-wishlist plugins. Lighthouse's simulated slow phone charges all of it to first
-paint. Moving into the 80s+ would mean rebuilding pages without some of those
-plugins, which changes how they work. That is a decision for the site owner,
-not something done silently in an "exact copy".
+Tried and rejected: LiteSpeed "Load JS Deferred" (lowered every score, so it is
+off) and critical-CSS inlining (broke slider layouts).
+
+What still holds the score back is the combined weight of the plugins that
+render the pages: about 40 active plugins with their own CSS and JavaScript,
+Elementor nested widgets, Royal Addons, Woo Variation Swatches, User
+Registration and two wishlist plugins. The simulated slow phone charges all of
+it to first paint. Reaching the 80s+ would mean rebuilding pages without some
+of those plugins, which changes how they work. That is a decision for the site
+owner, not something done silently in an "exact copy".
